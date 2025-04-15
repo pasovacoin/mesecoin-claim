@@ -1,7 +1,10 @@
 {
   "name": "Mesecoin",
   "symbol": "MESE",
-  "uri": "https://raw.githubusercontent.com/pasovacoin/mesecoin-claim/main/logo/mesecoin-logo.png",
+  "description": "A meme coin made for chaos, laughs, and airdrops 🚀💥",
+  "image": "https://pasovacoin.github.io/mesecoin-claim/logo/mesecoin-logo.png",
   "decimals": 9,
-  "address": "CMtGP3edzwQ3rZFbQnZDimjQZDXGNkBBLbH3NEDDa8wF"
+  "mint": "CMtGP3edzwQ3rZFbQnZDimjQZDXGNkBBLbH3NEDDa8wF",
+  "website": "https://pasovacoin.github.io/mesecoin-claim",
+  "tags": ["meme", "token", "airdrop"]
 }
