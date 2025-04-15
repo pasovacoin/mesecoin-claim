@@ -1,15 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Claim $MESE - Mesecoin Airdrop</title>
+  <title>Mesecoin Claim 🚀</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', sans-serif;
+      text-align: center;
+      background: url('https://i.imgur.com/3ZQ3Z9M.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-shadow: 1px 1px 2px black;
+    }
+    .container {
+      padding-top: 80px;
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    .logo {
+      width: 200px;
+      margin: 20px auto;
+    }
+    button {
+      background: #ff69b4;
+      border: none;
+      padding: 16px 32px;
+      font-size: 18px;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #fff;
+      margin-top: 20px;
+    }
+    #wallet-address {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+  </style>
 </head>
-<body style="text-align: center; font-family: sans-serif; padding: 40px;">
-  <img src="logo/mesecoin-logo.png" alt="Mesecoin Logo" width="256"/>
-  <h1>🎉 Claim Your $MESE</h1>
-  <p>This is the official airdrop page for Mesecoin.</p>
-  <p>Connect your wallet and claim your meme-powered crypto today!</p>
-  <p><strong>Mint Address:</strong><br>CMtGP3edzwQ3rZFbQnZDimjQZDXGNkBBLbH3NEDDa8wF</p>
-  <p>Wallet connect & smart claim features coming soon.</p>
+<body>
+  <div class="container">
+    <h1>🚀 Claim Your $MESE Meme Magic</h1>
+    <img src="logo/mesecoin-logo.png" class="logo" alt="Mesecoin Logo">
+    <br>
+    <button onclick="connectWallet()">🔌 Connect Wallet</button>
+    <div id="wallet-address"></div>
+    <button onclick="claimToken()">🎁 Claim $MESE</button>
+  </div>
+
+  <script>
+    let walletAddress = null;
+
+    async function connectWallet() {
+      if ("solana" in window) {
+        const provider = window.solana;
+        if (provider.isPhantom) {
+          try {
+            const resp = await provider.connect();
+            walletAddress = resp.publicKey.toString();
+            document.getElementById("wallet-address").innerText = "👛 " + walletAddress;
+          } catch (err) {
+            alert("Wallet connection rejected.");
+          }
+        }
+      } else {
+        alert("Phantom wallet not found! Please install it.");
+      }
+    }
+
+    function claimToken() {
+      if (!walletAddress) {
+        alert("Please connect your wallet first.");
+        return;
+      }
+
+      // This is a placeholder — replace this with real claim logic or POST to backend
+      alert("Claim submitted for: " + walletAddress + "\n🚀 You will receive $MESE soon!");
+    }
+  </script>
 </body>
 </html>
