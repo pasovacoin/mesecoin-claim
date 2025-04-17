@@ -10,8 +10,8 @@ Mesecoin ($MESE) is a fun, meme-powered Solana token launched on [pump.fun](http
 
 - **Name:** Mesecoin  
 - **Symbol:** MESE  
-- **Mint Address:** `CMtGP3edzwQ3rZFbQnZDimjQZDXGNkBBLbH3NEDDa8wF`  
-- **Decimals:** 9
+- **Mint Address:** `8srRUfYmFC3GCf9EDCrwpDP1Dv2J8jf6b1q63q7kpump`  
+- **Decimals:** 6
 
 ---
 
